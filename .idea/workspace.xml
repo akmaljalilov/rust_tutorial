@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated />
   </component>
@@ -12,20 +30,17 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b79e55d9-1d31-4747-91d2-173d74c24d41" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/treeLib.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/config/config_node.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/structs.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/node.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tree/tree.rs" afterDir="false" />
+    <list default="true" id="b79e55d9-1d31-4747-91d2-173d74c24d41" name="Default Changelist" comment=" -">
+      <change afterPath="$PROJECT_DIR$/src/GeneralTree.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/alloc_spec.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/cell_spec.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/rc_spec.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/struct_spec.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/weak_spec.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,101 +77,91 @@
     <property name="org.rust.disableDetachedFileInspection/home/ubuntu/CLionProjects/treeLib/src/tree/tree.rs" value="true" />
     <property name="settings.editor.selected.configurable" value="language.rust" />
   </component>
-  <component name="RunManager" selected="Cargo.Test tests::it_works">
-    <configuration name="Test lib::tests" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package treeLib --lib tests" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+  <component name="RunManager" selected="Cargo.Test DynamicArray::test">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test DynamicArray::test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package treeLib --lib DynamicArray::test -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::it_works" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package treeLib --lib tests::it_works -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+    <configuration name="Test cell_spec::test2" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package treeLib --lib cell_spec::test2 -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::spec_tree_lib" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package treeLib --lib tests::spec_tree_lib -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+    <configuration name="Test rc_spec::test2" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package treeLib --lib rc_spec::test2 -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test tests::typ_option (1)" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package treeLib --lib tests::typ_option -- --exact" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+    <configuration name="Test rc_spec::test3" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package treeLib --lib rc_spec::test3 -- --exact" />
       <option name="allFeatures" value="false" />
       <option name="emulateTerminal" value="false" />
       <option name="backtrace" value="SHORT" />
-      <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Test tests::typ_option" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package treeLib --lib tests::typ_option -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <option name="channel" value="NIGHTLY" />
-      <option name="allFeatures" value="false" />
-      <option name="emulateTerminal" value="false" />
-      <option name="backtrace" value="SHORT" />
       <envs />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
       <method v="2">
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Test rc_spec::test4" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="channel" value="DEFAULT" />
+      <option name="command" value="test --package treeLib --lib rc_spec::test4 -- --exact" />
+      <option name="allFeatures" value="false" />
+      <option name="emulateTerminal" value="false" />
+      <option name="backtrace" value="SHORT" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cargo.Test lib::tests" />
-      <item itemvalue="Cargo.Test tests::it_works" />
-      <item itemvalue="Cargo.Test tests::typ_option" />
-      <item itemvalue="Cargo.Test tests::typ_option (1)" />
-      <item itemvalue="Cargo.Test tests::spec_tree_lib" />
+      <item itemvalue="Cargo.Test cell_spec::test2" />
+      <item itemvalue="Cargo.Test rc_spec::test2" />
+      <item itemvalue="Cargo.Test rc_spec::test3" />
+      <item itemvalue="Cargo.Test rc_spec::test4" />
+      <item itemvalue="Cargo.Test DynamicArray::test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Test tests::it_works" />
-        <item itemvalue="Cargo.Test tests::spec_tree_lib" />
-        <item itemvalue="Cargo.Test tests::typ_option (1)" />
-        <item itemvalue="Cargo.Test tests::typ_option" />
-        <item itemvalue="Cargo.Test lib::tests" />
+        <item itemvalue="Cargo.Test DynamicArray::test" />
+        <item itemvalue="Cargo.Test rc_spec::test2" />
+        <item itemvalue="Cargo.Test rc_spec::test3" />
+        <item itemvalue="Cargo.Test rc_spec::test4" />
+        <item itemvalue="Cargo.Test cell_spec::test2" />
       </list>
     </recent_temporary>
   </component>
   <component name="RustProjectSettings">
-    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+    <option name="toolchainHomeDirectory" value="$PROJECT_DIR$/../../.cargo/bin" />
     <option name="version" value="2" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -169,12 +174,32 @@
       <updated>1608095648948</updated>
       <workItem from="1608095650026" duration="11995000" />
       <workItem from="1608120738254" duration="6741000" />
-      <workItem from="1608127501267" duration="337000" />
+      <workItem from="1608127501267" duration="4210000" />
+      <workItem from="1608175947276" duration="26395000" />
     </task>
+    <task id="LOCAL-00001" summary=" -">
+      <created>1608127916404</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608127916404</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_NEW_TODO" value="false" />
@@ -186,88 +211,119 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608098217780" />
-    <state x="751" y="297" key="#xdebugger.evaluate" timestamp="1608097130657">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2688" y="258" width="374" height="562" key="#com.intellij.ide.util.MemberChooser" timestamp="1608186825987">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
+    <state x="2688" y="258" width="374" height="562" key="#com.intellij.ide.util.MemberChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608186825987" />
+    <state x="2629" y="277" key="#xdebugger.evaluate" timestamp="1608187215299">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2629" y="277" key="#xdebugger.evaluate/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608187215299" />
     <state x="751" y="297" key="#xdebugger.evaluate/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608097130657" />
-    <state x="532" y="99" width="912" height="907" key="CommitChangelistDialog2" timestamp="1608127837788">
+    <state x="2402" y="74" width="912" height="907" key="CommitChangelistDialog2" timestamp="1608197694256">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2402" y="74" width="912" height="907" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608197694256" />
+    <state x="532" y="99" width="912" height="907" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608127916331" />
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1608176009632">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608176009632" />
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom" timestamp="1608207737096">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207737096" />
+    <state width="1807" height="48" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767348" />
+    <state width="1874" height="270" key="GridCell.Tab.0.center" timestamp="1608207737096">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207737096" />
+    <state width="1807" height="48" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767348" />
+    <state width="1874" height="270" key="GridCell.Tab.0.left" timestamp="1608207737096">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207737096" />
+    <state width="1807" height="48" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767348" />
+    <state width="1874" height="270" key="GridCell.Tab.0.right" timestamp="1608207737096">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="270" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207737096" />
+    <state width="1807" height="48" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767348" />
+    <state width="1874" height="319" key="GridCell.Tab.1.bottom" timestamp="1608207535402">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="319" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207535402" />
+    <state width="1807" height="48" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767349" />
+    <state width="1874" height="319" key="GridCell.Tab.1.center" timestamp="1608207535402">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="319" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207535402" />
+    <state width="1807" height="48" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767349" />
+    <state width="1874" height="319" key="GridCell.Tab.1.left" timestamp="1608207535402">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="319" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207535402" />
+    <state width="1807" height="48" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767349" />
+    <state width="1874" height="319" key="GridCell.Tab.1.right" timestamp="1608207535402">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="319" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207535402" />
+    <state width="1807" height="48" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608132767349" />
+    <state x="2369" y="174" key="SettingsEditor" timestamp="1608175956400">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608175956400" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1608127922723">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="532" y="99" width="912" height="907" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608127837788" />
-    <state width="1874" height="206" key="GridCell.Tab.0.bottom" timestamp="1608127373716">
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608127922723" />
+    <state x="2431" y="129" width="857" height="799" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608207196162">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="206" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="174" key="GridCell.Tab.0.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608118802983" />
-    <state width="1874" height="206" key="GridCell.Tab.0.center" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="174" key="GridCell.Tab.0.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608118802983" />
-    <state width="1874" height="206" key="GridCell.Tab.0.left" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="174" key="GridCell.Tab.0.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608118802983" />
-    <state width="1874" height="206" key="GridCell.Tab.0.right" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="174" key="GridCell.Tab.0.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608118802983" />
-    <state width="1874" height="206" key="GridCell.Tab.1.bottom" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="98" key="GridCell.Tab.1.bottom/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608115804798" />
-    <state width="1874" height="206" key="GridCell.Tab.1.center" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="98" key="GridCell.Tab.1.center/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608115804798" />
-    <state width="1874" height="206" key="GridCell.Tab.1.left" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="98" key="GridCell.Tab.1.left/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608115804798" />
-    <state width="1874" height="206" key="GridCell.Tab.1.right" timestamp="1608127373716">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="206" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127373716" />
-    <state width="1807" height="98" key="GridCell.Tab.1.right/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608115804798" />
-    <state x="2369" y="174" key="SettingsEditor" timestamp="1608123797699">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2369" y="174" key="SettingsEditor/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608123797699" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1608127642754">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608127642754" />
-    <state x="560" y="153" width="857" height="799" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608110736786">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
+    <state x="2431" y="129" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608207196162" />
     <state x="560" y="153" width="857" height="799" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608110736786" />
-    <state x="1955" y="32" width="914" height="1005" key="dock-window-1" timestamp="1608123502195">
+    <state x="1920" y="0" width="1559" height="1011" maximized="true" key="dock-window-1" timestamp="1608128279483">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="1955" y="32" width="914" height="1005" key="dock-window-1/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608123502195" />
-    <state x="2559" y="137" width="823" height="804" key="find.popup" timestamp="1608120982278">
+    <state x="1920" y="0" width="1559" height="1011" maximized="true" key="dock-window-1/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608128279483" />
+    <state x="2559" y="137" width="1008" height="804" key="find.popup" timestamp="1608197308969">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2559" y="137" width="823" height="804" key="find.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608120982278" />
+    <state x="2559" y="137" width="1008" height="804" key="find.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608197308969" />
     <state x="684" y="161" width="618" height="783" key="find.popup/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608120250131" />
     <state x="804" y="467" width="381" height="176" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1608127626131">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="2684" y="451" width="381" height="176" key="git4idea.remote.GitConfigureRemotesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608127478988" />
     <state x="804" y="467" key="git4idea.remote.GitConfigureRemotesDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1608127626131" />
+    <state x="2544" y="246" key="run.anything.popup" timestamp="1608180435495">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2544" y="246" key="run.anything.popup/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1608180435495" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/lib.rs</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/test.rs</url>
+          <line>143</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/test.rs</url>
+          <line>152</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/rc_spec.rs</url>
+          <line>51</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/cell_spec.rs</url>
+          <line>36</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
