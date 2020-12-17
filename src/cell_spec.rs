@@ -3,7 +3,7 @@ use std::rc::Rc;
 
 #[derive(Debug)]
 struct MyStruct {
-    value: Cell<u8>
+    value: u8
 }
 
 #[derive(Debug)]
@@ -14,14 +14,14 @@ struct MyStructWithOutCell {
 
 #[test]
 fn test1() {
-    let my_struct = MyStruct { value: Cell::new(10) };
-    my_struct.value.set(50);
-    println!("{:?}", my_struct.value.take());
-    println!("{:?}", my_struct.value);
-
-    let mut my_struct = MyStructWithOutCell { value: 10 };
-    my_struct.value = 50;
-    println!("{:?}", my_struct.value);
+    // let my_struct = MyStruct { value: Cell::new(10) };
+    // my_struct.value = 50;
+    // println!("{:?}", my_struct.value.take());
+    // println!("{:?}", my_struct.value);
+    //
+    // let mut my_struct = MyStructWithOutCell { value: 10 };
+    // my_struct.value = 50;
+    // println!("{:?}", my_struct.value);
 }
 
 #[test]

@@ -44,3 +44,23 @@ fn test() {
     node.child[3].child.push_back(new_node(9));
     level_order_travels(node);
 }
+
+#[test]
+fn test1() {
+    let mut v = VecDeque::<i32>::with_capacity(2);
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+    v.push_back(4);
+    v.pop_front();
+    v.pop_front();
+    v.pop_front();
+    v.push_front(5);
+    v.push_back(5);
+
+    let y = 3_u32;
+    let x  = y.wrapping_sub(5);
+    println!("{}",x);
+    // println!("{}",3u32-5u32);
+
+}

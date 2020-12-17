@@ -26,7 +26,7 @@ mod tests {
     }
 
     #[test]
-    /*fn option_spec() {
+    fn option_spec() {
         ///  Take
         let mut some = Some(4);
         let new_some = some.take();
@@ -114,40 +114,44 @@ mod tests {
         let y = Some(10.6);
         let new_op = x.zip_with(y, Point::new);
         assert_eq!(Some(Point { x: 10.5, y: 10.6 }), new_op);
-    }*/
+    }
+
     #[test]
     fn box_test() {
-        let x = Box::new(10);
-        // println!("{}", std::mem::size_of_val(&x));
+        // let x = Box::new(1u8);
+        // println!("{}", std::mem::size_of_val(&x.g));
         // println!("{}", std::mem::size_of_val(&10));
+        // println!("{}", std::mem::size_of_val(&1u128));
 
-        let mut five = Box::<u32>::new_uninit();
-        let value = five.write(10);
-        let five_value = unsafe {
-            five.assume_init() //Todo
-        };
-        println!("{}", five_value);
+        /* let mut five = Box::<u32>::new_uninit();
+         let value = five.write(10);
+         let five_value = unsafe {
+             five.assume_init() //Todo
+         };
+         println!("{}", five_value);
 
-        // new_uninit_slice
-        let mut box_un_init_slice = Box::<[i32]>::new_uninit_slice(3);
-        let box_un_init_slice = unsafe {
-            box_un_init_slice[0].as_mut_ptr().write(10);
+         // new_uninit_slice
+         let mut box_un_init_slice = Box::<[i32]>::new_uninit_slice(3);
+         let box_un_init_slice = unsafe {
+             box_un_init_slice[0].as_mut_ptr().write(10);
 
-            box_un_init_slice.assume_init()
-        };
-        assert_eq!(*box_un_init_slice, [10, 0, 0]);
-
+             box_un_init_slice.assume_init()
+         };
+         assert_eq!(*box_un_init_slice, [10, 0, 0]);
+ */
         //raw_pointer
-        let mut box_new = Box::new(10);
-        let raw = unsafe { Box::into_raw(box_new) };
-        let box_new = unsafe { Box::from_raw(raw) };
+        let mut box_new = Box::new(10u8);
+        // let raw = unsafe { Box::into_raw(box_new) };
+        // let box_new = unsafe { Box::from_raw(raw) };
+        let value = Box::leak(box_new);
+        let s = std::mem::size_of_val(&*value);
         print!("0");
     }
 
     #[test]
     fn new_zeroed_box() {
         let b = Box::<[i32]>::new_zeroed_slice(3);
-        let b = unsafe{b.assume_init()};
+        let b = unsafe { b.assume_init() };
         let s = std::mem::size_of_val(&b);
         assert_eq!(*b, [0, 0, 0]);
         print!("s");

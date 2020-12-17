@@ -16,6 +16,7 @@ mod rc_spec;
 mod cell_spec;
 mod weak_spec;
 mod GeneralTree;
+mod BTree_spec;
 
 #[cfg(test)]
 mod tests {
