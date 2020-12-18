@@ -5,6 +5,7 @@
 #![feature(new_uninit)]
 #![feature(maybe_uninit_extra)]
 #![feature(allocator_api)]
+#![feature(map_first_last)]
 /*mod structs;
 mod tree;
 mod config;
@@ -17,6 +18,7 @@ mod cell_spec;
 mod weak_spec;
 mod GeneralTree;
 mod BTree_spec;
+use uuid::Uuid;
 
 #[cfg(test)]
 mod tests {

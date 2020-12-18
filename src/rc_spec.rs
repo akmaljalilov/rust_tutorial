@@ -25,7 +25,7 @@ fn test() {
 
 #[test]
 fn test() {
-    let gadget_owner = Rc::new((Owner { name: RefCell::new("A".to_string()), gadgets: RefCell::new(vec![]) }));
+    let gadget_owner = Rc::new(Owner { name: RefCell::new("A".to_string()), gadgets: RefCell::new(vec![]) });
     let gadget1 = Rc::new(Gadget { owner: Rc::clone(&gadget_owner), id: 1 });
     let gadget2 = Rc::new(Gadget { owner: Rc::clone(&gadget_owner), id: 2 });
     {
