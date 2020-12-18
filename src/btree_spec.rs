@@ -1,16 +1,9 @@
 use std::any::Any;
-use std::borrow::{Borrow, BorrowMut};
-use std::cell::{Cell, RefCell};
+use std::cell::RefCell;
 use std::collections::{BTreeMap, VecDeque};
-use std::convert::TryFrom;
 use std::fmt::Debug;
 use std::rc::Rc;
-use std::str::FromStr;
-use std::thread::sleep;
 
-use antlr_rust::parser_rule_context::ParserRuleContext;
-use antlr_rust::tree::LeafNode;
-use uuid::Uuid;
 
 type Parent<D> = Option<Rc<Node<D>>>;
 
@@ -62,7 +55,7 @@ impl<D> Node<D> where D: 'static + Debug {
     }
 
     fn depth(&self) -> i32 {
-        let mut leaves = self.get_leaves();
+        let leaves = self.get_leaves();
         let mut max_level = 0;
         for (_, leaf) in leaves.iter() {
             max_level = max_level.max(self.level(&leaf))
@@ -115,20 +108,20 @@ impl<D> Node<D> where D: 'static + Debug {
 
 #[test]
 fn test1() {
-    let mut harry = Node::new(None, RefCell::new(BTreeMap::new()), "Harry".to_string());
-    let bill = harry.insert_child("bill".to_string());
+    let harry = Node::new(None, RefCell::new(BTreeMap::new()), "Harry".to_string());
+    let _bill = harry.insert_child("bill".to_string());
     let jane = harry.insert_child("jane".to_string());
     jane.insert_child("mark".to_string());
     jane.insert_child("diane".to_string());
     harry.insert_child("mary".to_string());
-    let mut level = 0;
+    // let mut level = 0;
     // print_tree(&mut harry, "", &mut level);
     // let level = harry.depth();
     // print!("{}", level);
     harry.level_order_travels();
 }
 
-fn print_tree(node: &Rc<Node<String>>, mut tab: &str, level: &mut i32) {
+/*fn print_tree(node: &Rc<Node<String>>, tab: &str, level: &mut i32) {
     println!("BEFORE");
     *level += 1;
     println!("level {}{}{}", level, tab, node.data);
@@ -143,6 +136,5 @@ fn print_tree(node: &Rc<Node<String>>, mut tab: &str, level: &mut i32) {
 
         print_tree(tree, tabs.as_str(), level);
     }
-    tab = "";
     print!("");
-}
+}*/

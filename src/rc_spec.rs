@@ -1,4 +1,3 @@
-use std::borrow::BorrowMut;
 use std::cell::{Cell, RefCell};
 use std::rc::{Rc, Weak};
 
@@ -98,8 +97,5 @@ fn test4() {
 
 #[test]
 fn test5() {
-    let mut s = 10;
-    {
 
-    }
 }

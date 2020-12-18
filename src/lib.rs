@@ -16,9 +16,8 @@ mod struct_spec;
 mod rc_spec;
 mod cell_spec;
 mod weak_spec;
-mod GeneralTree;
-mod BTree_spec;
-use uuid::Uuid;
+mod general_tree;
+mod btree_spec;
 
 #[cfg(test)]
 mod tests {
